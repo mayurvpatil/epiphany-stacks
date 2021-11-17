@@ -15,8 +15,8 @@ roles:
   remote_cluster_client: "true"
   ml: "true"
 
-replicas: 1
-minimumMasterNodes: 1
+replicas: 2
+minimumMasterNodes: 2
 
 esConfig:
   elasticsearch.yml: |
@@ -230,7 +230,7 @@ readinessProbe:
   timeoutSeconds: 5
 
 # https://www.elastic.co/guide/en/elasticsearch/reference/7.15/cluster-health.html#request-params wait_for_status
-clusterHealthCheckParams: 'wait_for_status=yellow&timeout=1s'
+clusterHealthCheckParams: "wait_for_status=green&timeout=1s"
 
 ## Use an alternate scheduler.
 ## ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
