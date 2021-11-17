@@ -267,3 +267,7 @@ sysctlInitContainer:
   enabled: true
 
 keystore: []
+
+xpack:
+  security:
+    enabled: false
