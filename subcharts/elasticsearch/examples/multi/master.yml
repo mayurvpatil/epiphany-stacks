@@ -1,6 +1,9 @@
 ---
+
 clusterName: "multi"
 nodeGroup: "master"
 
 roles:
-  - master
+  master: "true"
+  ingest: "false"
+  data: "false"

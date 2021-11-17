@@ -1,5 +1,4 @@
 ---
-{{- if .Values.service.enabled -}}
 kind: Service
 apiVersion: v1
 metadata:
@@ -21,6 +20,7 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   selector:
+    heritage: {{ .Release.Service | quote }}
     release: {{ .Release.Name | quote }}
     chart: "{{ .Chart.Name }}"
     app: "{{ template "elasticsearch.uname" . }}"
@@ -40,10 +40,6 @@ spec:
 {{- with .Values.service.loadBalancerSourceRanges }}
   loadBalancerSourceRanges:
 {{ toYaml . | indent 4 }}
-{{- end }}
-{{- if .Values.service.externalTrafficPolicy }}
-  externalTrafficPolicy: {{ .Values.service.externalTrafficPolicy }}
-{{- end }}
 {{- end }}
 ---
 kind: Service

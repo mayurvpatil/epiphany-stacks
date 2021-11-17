@@ -1,12 +1,10 @@
 default: test
-
 include ../../../helpers/examples.mk
 
 RELEASE := helm-es-config
-TIMEOUT := 1200s
 
 install:
-	helm upgrade --wait --timeout=$(TIMEOUT) --install --values values.yaml $(RELEASE) ../../
+	helm upgrade --wait --timeout=600 --install $(RELEASE) --values ./values.yaml ../../
 
 secrets:
 	kubectl delete secret elastic-config-credentials elastic-config-secret elastic-config-slack elastic-config-custom-path || true
@@ -18,4 +16,4 @@ secrets:
 test: secrets install goss
 
 purge:
-	helm del $(RELEASE)
+	helm del --purge $(RELEASE)
