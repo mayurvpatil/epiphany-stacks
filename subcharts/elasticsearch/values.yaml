@@ -345,8 +345,7 @@ fsGroup: ""
 
 xpack:
   security:
-    enabled: false
-  transport:
-    ssl:
-      enabled: true
+    http:
+      ssl:
+        enabled: true
 
