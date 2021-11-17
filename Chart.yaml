@@ -9,47 +9,47 @@ dependencies:
     version: 18.0.5
     repository: file://subcharts/kube-prometheus-stack
 
-  - name: base
-    version: 1.12.0-beta.2
-    repository: file://subcharts/base
+  # - name: base
+  #   version: 1.12.0-beta.2
+  #   repository: file://subcharts/base
 
-  - name: istiod
-    version: 1.12.0-beta.2
-    repository: file://subcharts/istiod
+  # - name: istiod
+  #   version: 1.12.0-beta.2
+  #   repository: file://subcharts/istiod
 
-  - name: istio-ingress
-    version: 1.0.0
-    repository: file://subcharts/istio-ingress
+  # - name: istio-ingress
+  #   version: 1.0.0
+  #   repository: file://subcharts/istio-ingress
 
-  - name: istio-egress
-    version: 1.0.0
-    repository: file://subcharts/istio-egress
+  # - name: istio-egress
+  #   version: 1.0.0
+  #   repository: file://subcharts/istio-egress
 
   - name: elasticsearch
     version: 8.0.0-SNAPSHOT
     repository: file://subcharts/elasticsearch
 
-  - name: fluentd-elasticsearch
-    version: 13.1.0
-    repository: file://subcharts/fluentd-elasticsearch
+  # - name: fluentd-elasticsearch
+  #   version: 13.1.0
+  #   repository: file://subcharts/fluentd-elasticsearch
 
-  - name: kibana
-    version: 7.14.0
-    repository: file://subcharts/kibana
+  # - name: kibana
+  #   version: 7.14.0
+  #   repository: file://subcharts/kibana
 
-  - name: keycloak
-    version: 15.0.2
-    repository: file://subcharts/keycloak
+  # - name: keycloak
+  #   version: 15.0.2
+  #   repository: file://subcharts/keycloak
 
-  - name: kafka
-    version: 14.2.0
-    repository: file://subcharts/kafka
+  # - name: kafka
+  #   version: 14.2.0
+  #   repository: file://subcharts/kafka
 
-  - name: rabbitmq
-    version: 8.22.4
-    repository: file://subcharts/rabbitmq
+  # - name: rabbitmq
+  #   version: 8.22.4
+  #   repository: file://subcharts/rabbitmq
 
-  - name: vault
-    version:  0.17.1
-    repository: file://subcharts/vault-helm-0.17.1
+  # - name: vault
+  #   version:  0.17.1
+  #   repository: file://subcharts/vault-helm-0.17.1
 
