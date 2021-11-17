@@ -271,3 +271,8 @@ keystore: []
 xpack:
   security:
     enabled: false
+  transport:
+    ssl:
+      enabled: true
+
+
