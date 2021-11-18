@@ -19,6 +19,10 @@ dependencies:
     version: 4.4.1
     repository: file://subcharts/fluentd
 
+  - name: keycloak
+    version: 15.0.2
+    repository: file://subcharts/keycloak
+
   # - name: base
   #   version: 1.12.0-beta.2
   #   repository: file://subcharts/base
@@ -46,10 +50,6 @@ dependencies:
   # - name: kibana
   #   version: 7.14.0
   #   repository: file://subcharts/kibana
-
-  # - name: keycloak
-  #   version: 15.0.2
-  #   repository: file://subcharts/keycloak
 
   # - name: kafka
   #   version: 14.2.0
