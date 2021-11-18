@@ -9,6 +9,12 @@ dependencies:
     version: 18.0.5
     repository: file://subcharts/kube-prometheus-stack
 
+  - name: common
+    repository: file://subcharts/common/
+    tags:
+      - bitnami-common
+    version: 1.10.1
+
   - name: fluentd
     version: 4.4.1
     repository: file://subcharts/fluentd
