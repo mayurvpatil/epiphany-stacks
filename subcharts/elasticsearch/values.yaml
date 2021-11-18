@@ -1,5 +1,5 @@
 ---
-clusterName: "es-epistack"
+clusterName: "es-epiphany"
 nodeGroup: "master"
 
 # The service that non master groups will try to connect to when joining the cluster
@@ -15,25 +15,19 @@ roles:
   remote_cluster_client: "true"
   ml: "true"
 
-replicas: 2
+replicas: 3
 minimumMasterNodes: 2
-
-esConfig:
-  elasticsearch.yml: |
-    xpack.security.enabled: false
-    xpack.security.transport.ssl.enabled: false
-    xpack.security.transport.ssl.verification_mode: certificate
-    xpack.security.transport.ssl.keystore.path: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
-    xpack.security.transport.ssl.truststore.path: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
-    xpack.security.http.ssl.enabled: false
-    xpack.security.http.ssl.truststore.path: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
-    xpack.security.http.ssl.keystore.path: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
 
 esMajorVersion: ""
 
 # Allows you to add any config files in /usr/share/elasticsearch/config/
 # such as elasticsearch.yml and log4j2.properties
-
+esConfig: {}
+#  elasticsearch.yml: |
+#    key:
+#      nestedkey: value
+#  log4j2.properties: |
+#    key = value
 
 # Extra environment variables to append to this nodeGroup
 # This will be appended to the current 'env:' key. You can use any of the kubernetes env
@@ -65,7 +59,7 @@ hostAliases: []
 #  - "bar.local"
 
 image: "docker.elastic.co/elasticsearch/elasticsearch"
-imageTag: 7.15.0
+imageTag: "7.15.0"
 imagePullPolicy: "IfNotPresent"
 
 podAnnotations:
@@ -75,7 +69,7 @@ podAnnotations:
 # additionals labels
 labels: {}
 
-esJavaOpts: "-Xms256m -Xmx256m" # example: "-Xmx1g -Xms1g"
+esJavaOpts: "" # example: "-Xmx1g -Xms1g"
 
 # resources:
 #   requests:
@@ -166,7 +160,7 @@ antiAffinityTopologyKey: "kubernetes.io/hostname"
 
 # Hard means that by default pods will only be scheduled if there are enough nodes for them
 # and that they will never end up on the same node. Setting this to soft will do this "best effort"
-antiAffinity: "soft"
+antiAffinity: "hard"
 
 # This is the node affinity settings as defined in
 # https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#node-affinity-beta-feature
@@ -181,7 +175,7 @@ podManagementPolicy: "Parallel"
 # If you experience slow pod startups you probably want to set this to `false`.
 enableServiceLinks: true
 
-protocol: https
+protocol: http
 httpPort: 9200
 transportPort: 9300
 
@@ -222,15 +216,15 @@ terminationGracePeriod: 120
 
 sysctlVmMaxMapCount: 262144
 
-# readinessProbe:
-#   failureThreshold: 3
-#   initialDelaySeconds: 10
-#   periodSeconds: 10
-#   successThreshold: 3
-#   timeoutSeconds: 5
+readinessProbe:
+  failureThreshold: 3
+  initialDelaySeconds: 10
+  periodSeconds: 10
+  successThreshold: 3
+  timeoutSeconds: 5
 
 # https://www.elastic.co/guide/en/elasticsearch/reference/7.15/cluster-health.html#request-params wait_for_status
-clusterHealthCheckParams: "wait_for_status=green&timeout=1s"
+clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
 
 ## Use an alternate scheduler.
 ## ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
@@ -284,7 +278,7 @@ lifecycle:
   #         curl -XPUT "$ES_URL/_template/$TEMPLATE_NAME" -H 'Content-Type: application/json' -d'{"index_patterns":['\""$INDEX_PATTERN"\"'],"settings":{"number_of_shards":'$SHARD_COUNT',"number_of_replicas":'$REPLICA_COUNT'}}'
 
 sysctlInitContainer:
-  enabled: false
+  enabled: true
 
 keystore: []
 
@@ -348,5 +342,3 @@ tests:
 # Deprecated
 # please use the above podSecurityContext.fsGroup instead
 fsGroup: ""
-
-
