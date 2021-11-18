@@ -8,7 +8,7 @@ elasticsearch:
   clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
   xpack:
     security:
-      enabled: true
+      enabled: false
       transport:
         ssl:
           enabled: true
