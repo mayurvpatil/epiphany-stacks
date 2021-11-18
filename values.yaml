@@ -3,9 +3,9 @@
 # Declare variables to be passed into your templates.
 
 
-elasticsearch:
-  clusterName: "es-epiphany"
-  clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
-  xpack:
-    security:
-      enabled: false
+# elasticsearch:
+#   clusterName: "es-epiphany"
+#   clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
+#   xpack:
+#     security:
+#       enabled: false
