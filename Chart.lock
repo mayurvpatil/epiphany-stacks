@@ -2,8 +2,11 @@ dependencies:
 - name: kube-prometheus-stack
   repository: file://subcharts/kube-prometheus-stack
   version: 18.0.5
-- name: elasticsearch
-  repository: file://subcharts/elasticsearch
-  version: 8.0.0-SNAPSHOT
-digest: sha256:0908cbf7d87d3dd51f531162a800684efa4aa024afaf505906460a22d407404c
-generated: "2021-11-17T12:54:01.393979+05:30"
+- name: common
+  repository: file://subcharts/common/
+  version: 1.10.1
+- name: fluentd
+  repository: file://subcharts/fluentd
+  version: 4.4.1
+digest: sha256:31507821d800c0ef354ea8347d4b2b3f67b9313b15c243968e848ec7761e2abc
+generated: "2021-11-18T14:59:38.325481+05:30"
