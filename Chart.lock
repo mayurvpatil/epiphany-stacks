@@ -11,5 +11,17 @@ dependencies:
 - name: keycloak
   repository: file://subcharts/keycloak
   version: 15.0.2
-digest: sha256:6ad2f49681a4da605c4672027defc92e4294853191a765c392b11a4366b95446
-generated: "2021-11-18T15:08:21.455927+05:30"
+- name: base
+  repository: file://subcharts/base
+  version: 1.12.0-beta.2
+- name: istiod
+  repository: file://subcharts/istiod
+  version: 1.12.0-beta.2
+- name: istio-ingress
+  repository: file://subcharts/istio-ingress
+  version: 1.0.0
+- name: istio-egress
+  repository: file://subcharts/istio-egress
+  version: 1.0.0
+digest: sha256:79f57fe77a87116e0e79aaaed72d333b8fe856fd5836b8ee08870a85a16f4cd5
+generated: "2021-11-18T15:16:39.463991+05:30"

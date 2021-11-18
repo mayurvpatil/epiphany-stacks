@@ -23,21 +23,21 @@ dependencies:
     version: 15.0.2
     repository: file://subcharts/keycloak
 
-  # - name: base
-  #   version: 1.12.0-beta.2
-  #   repository: file://subcharts/base
+  - name: base
+    version: 1.12.0-beta.2
+    repository: file://subcharts/base
 
-  # - name: istiod
-  #   version: 1.12.0-beta.2
-  #   repository: file://subcharts/istiod
+  - name: istiod
+    version: 1.12.0-beta.2
+    repository: file://subcharts/istiod
 
-  # - name: istio-ingress
-  #   version: 1.0.0
-  #   repository: file://subcharts/istio-ingress
+  - name: istio-ingress
+    version: 1.0.0
+    repository: file://subcharts/istio-ingress
 
-  # - name: istio-egress
-  #   version: 1.0.0
-  #   repository: file://subcharts/istio-egress
+  - name: istio-egress
+    version: 1.0.0
+    repository: file://subcharts/istio-egress
 
   # - name: elasticsearch
   #   version: 7.15.0
