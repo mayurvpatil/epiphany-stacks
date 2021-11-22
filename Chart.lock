@@ -17,11 +17,5 @@ dependencies:
 - name: istiod
   repository: file://subcharts/istiod
   version: 1.12.0-beta.2
-- name: istio-ingress
-  repository: file://subcharts/istio-ingress
-  version: 1.0.0
-- name: istio-egress
-  repository: file://subcharts/istio-egress
-  version: 1.0.0
-digest: sha256:79f57fe77a87116e0e79aaaed72d333b8fe856fd5836b8ee08870a85a16f4cd5
-generated: "2021-11-18T15:16:39.463991+05:30"
+digest: sha256:f6d29da815244f2dad7700972fcf8d4047873013124d0700aa0c27442ed8dda6
+generated: "2021-11-22T17:58:31.553822+05:30"

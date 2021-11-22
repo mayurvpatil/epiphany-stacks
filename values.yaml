@@ -9,6 +9,3 @@
 #   xpack:
 #     security:
 #       enabled: false
-
-istiod:
-  revision: "epiistio"
