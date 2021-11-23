@@ -35,10 +35,6 @@ dependencies:
     version: 7.15.0
     repository: file://subcharts/elasticsearch
 
-  - name: kibana
-    version: 7.14.0
-    repository: file://subcharts/kibana
-
   - name: kafka
     version: 14.2.0
     repository: file://subcharts/kafka
@@ -47,9 +43,13 @@ dependencies:
     version: 8.22.4
     repository: file://subcharts/rabbitmq
 
-  - name: vault
-    version:  0.17.1
-    repository: file://subcharts/vault-helm-0.17.1
+  # - name: vault
+  #   version:  0.17.1
+  #   repository: file://subcharts/vault-helm-0.17.1
+
+  # - name: kibana
+  #   version: 7.14.0
+  #   repository: file://subcharts/kibana
 
   # - name: istio-ingress
   #   version: 1.0.0

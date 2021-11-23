@@ -20,17 +20,11 @@ dependencies:
 - name: elasticsearch
   repository: file://subcharts/elasticsearch
   version: 7.15.0
-- name: kibana
-  repository: file://subcharts/kibana
-  version: 7.14.0
 - name: kafka
   repository: file://subcharts/kafka
   version: 14.2.0
 - name: rabbitmq
   repository: file://subcharts/rabbitmq
   version: 8.22.4
-- name: vault
-  repository: file://subcharts/vault-helm-0.17.1
-  version: 0.17.1
-digest: sha256:e742802eabad7a26fa0789cd07c1610a6567c8817e3491a758c7e2ae27ab038f
-generated: "2021-11-23T19:36:46.383103+05:30"
+digest: sha256:7b8e9c1199a701f4f0000907ec03c95d9e55084641d82837ae9a280ccf547458
+generated: "2021-11-23T19:47:13.846995+05:30"
