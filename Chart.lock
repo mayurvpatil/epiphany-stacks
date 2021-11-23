@@ -17,5 +17,8 @@ dependencies:
 - name: istiod
   repository: file://subcharts/istiod
   version: 1.12.0-beta.2
-digest: sha256:f6d29da815244f2dad7700972fcf8d4047873013124d0700aa0c27442ed8dda6
-generated: "2021-11-22T17:58:31.553822+05:30"
+- name: elasticsearch
+  repository: file://subcharts/elasticsearch
+  version: 7.15.0
+digest: sha256:9d6e546e1109bdc6c10a678e042a003d59d8e9bcfb202ee38cdf9b658e972ec4
+generated: "2021-11-23T12:50:37.771493+05:30"
