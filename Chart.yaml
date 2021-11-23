@@ -31,6 +31,26 @@ dependencies:
     version: 1.12.0-beta.2
     repository: file://subcharts/istiod
 
+  - name: elasticsearch
+    version: 7.15.0
+    repository: file://subcharts/elasticsearch
+
+  - name: kibana
+    version: 7.14.0
+    repository: file://subcharts/kibana
+
+  - name: kafka
+    version: 14.2.0
+    repository: file://subcharts/kafka
+
+  - name: rabbitmq
+    version: 8.22.4
+    repository: file://subcharts/rabbitmq
+
+  - name: vault
+    version:  0.17.1
+    repository: file://subcharts/vault-helm-0.17.1
+
   # - name: istio-ingress
   #   version: 1.0.0
   #   repository: file://subcharts/istio-ingress
@@ -39,27 +59,7 @@ dependencies:
   #   version: 1.0.0
   #   repository: file://subcharts/istio-egress
 
-  - name: elasticsearch
-    version: 7.15.0
-    repository: file://subcharts/elasticsearch
-
   # - name: fluentd-elasticsearch
   #   version: 13.1.0
   #   repository: file://subcharts/fluentd-elasticsearch
-
-  # - name: kibana
-  #   version: 7.14.0
-  #   repository: file://subcharts/kibana
-
-  # - name: kafka
-  #   version: 14.2.0
-  #   repository: file://subcharts/kafka
-
-  # - name: rabbitmq
-  #   version: 8.22.4
-  #   repository: file://subcharts/rabbitmq
-
-  # - name: vault
-  #   version:  0.17.1
-  #   repository: file://subcharts/vault-helm-0.17.1
 
